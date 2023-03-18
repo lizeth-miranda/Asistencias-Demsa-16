@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- secuencia para la nómina-->
+    <record id="seq_nomina_demsa" model="ir.sequence">
+        <field name="name">Nomina Demsa</field>
+        <field name="code">nomina.demsa</field>
+        <field name="prefix">N</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>
