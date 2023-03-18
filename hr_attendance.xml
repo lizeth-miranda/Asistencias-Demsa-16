@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_attendance_view_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.view.tree.inherited</field>
+        <field name="model">hr.attendance</field>
+        <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="department" />
+                <field name="account_ids" />
+                <field name="currency_id" invisible="1" />
+            </field>
+            <field name="check_out" position="after">
+                <field name="day" invisible="0" optional="hide" />
+                <field name="Date" invisible="1" />
+                <field name="fecha" readonly="1" />
+            </field>
+            <field name="worked_hours" position="after">
+                <!-- <field name="total" /> -->
+                <!-- <field name="mitad" /> -->
+                <!-- <field name="hours_sat" widget="float_time" /> -->
+                <field name="hours" widget="float_time" optional="hide" />
+                <!-- <field name="horas_trab" widget="float_time" /> -->
+                <field name="total_hours" widget="float_time" invisible="0" optional="hide" />
+                <field name="hours_extra" widget="float_time" sum="hours_extra" />
+                <field name="account_ids_extras" options="{'no_open': True}" optional="hide" />
+                <field name="comen" />
+                <!-- <field name="tem" optional="hide" /> -->
+                <field name="user_id" optional="hide" options="{'no_open': True}" />
+                <field name="tipo_resid" optional="hide" />
+                <!-- <field name="tipo_empl" optional="hide" />  -->
+                <field name="block_lines" readonly="1" optional="hide" />
+                <field name="manager" readonly="1" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
