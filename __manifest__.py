@@ -32,7 +32,7 @@
         'views/hr_attendance.xml',
         'views/hr_employee.xml',
         # 'views/account_analytic.xml',
-        # 'views/account_analytic_account.xml',
+        'views/account_analytic_account.xml',
         'views/res_user.xml',
         # 'views/visor_asistencias_planta.xml',
         'views/groups_acuerdocompra_basico.xml',
