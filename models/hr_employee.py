@@ -7,7 +7,8 @@ class empl(models.Model):
     _inherit = 'hr.employee'
     
      _sql_constraints = [
-        ('pin_uniq', 'unique (num_employee)', "EL CÓDIGO DE EMPLEADO QUE SE INTENTA ASIGNAR YA EXISTE !"),
+        ('pin_uniq', 'unique (num_employee)',
+         "EL CÓDIGO DE EMPLEADO QUE SE INTENTA ASIGNAR YA EXISTE !"),
     ]
 
 
