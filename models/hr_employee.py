@@ -5,12 +5,11 @@ from odoo import fields, models, api, _
 
 class empl(models.Model):
     _inherit = 'hr.employee'
-    
-     _sql_constraints = [
-        ('pin_uniq', 'unique (num_employee)',
-         "EL CÓDIGO DE EMPLEADO QUE SE INTENTA ASIGNAR YA EXISTE !"),
-    ]
 
+    _sql_constraints = [
+        ('pin_uniq', 'unique (num_employee)',
+         "¡EL CÓDIGO DE EMPLEADO QUE SE INTENTA ASIGNAR YA EXISTE !"),
+    ]
 
     ##Datos informativos y personales##
     num_employee = fields.Char(string="Número Empleado",
@@ -109,19 +108,3 @@ class empl(models.Model):
             r5 = r4 / 8
             r6 = r5 * 2
             rec.cost_extra_bono = r6
-
-     ##NOMINA#
-
-    # discounts_ids = fields.One2many(comodel_name='discount.employee',
-    #                                 inverse_name='employee', groups="hr.group_hr_user", tracking=True)
-
-    # pres_perso = fields.Monetary(
-    #     string="Préstamo Personal", related="discounts_ids.sum_abono", )
-
-    # desc_HPP = fields.Monetary(
-    #     string="Desc.EPP", related="discounts_ids.sum_descEPP",)
-
-    # otros_desc = fields.Monetary(
-    #     string="Otros Descuentos", related="discounts_ids.sum_otros_desc",)
-
-    # depo = fields.Monetary(related="discounts_ids.deposito",)
