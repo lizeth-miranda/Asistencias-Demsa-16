@@ -8,7 +8,7 @@ class empl(models.Model):
 
     _sql_constraints = [
         ('pin_uniq', 'unique (num_employee)',
-         "¡EL CÓDIGO DE EMPLEADO QUE SE INTENTA ASIGNAR YA EXISTE !"),
+         "¡EL CÓDIGO DE EMPLEADO QUE SE INTENTA ASIGNAR YA EXISTE!"),
     ]
 
     ##Datos informativos y personales##
