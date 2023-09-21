@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Asistencias Demsa16',
-    'version': '16.5',
+    'version': '16.1',
     'author': 'Demsa Industrial',
     'website': '',
     'depends': [
